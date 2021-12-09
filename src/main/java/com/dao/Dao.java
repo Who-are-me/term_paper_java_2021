@@ -3,6 +3,7 @@ package com.dao;
 
 import java.sql.SQLException;
 
+
 public interface Dao<T> {
     void save(T data) throws SQLException;
 

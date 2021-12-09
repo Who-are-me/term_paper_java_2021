@@ -41,10 +41,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/login/**")           .permitAll()
                     .antMatchers("/admin/**")           .hasRole("ADMIN")
 ///////////////////////////////////////////   ACCOUNT   ////////////////////////////////////////////////////////////////
-                    .antMatchers("/account/create/**")  .hasAnyRole("ROLE_ADMIN")
-                    .antMatchers("/account/get/**")     .hasAnyRole("ROLE_ADMIN")
-                    .antMatchers("/account/delete/**")  .hasAnyRole("ROLE_ADMIN")
-                    .antMatchers("/account/update/**")  .hasAnyRole("ROLE_ADMIN")
+                    .antMatchers("/account/**")  .hasAnyRole("ROLE_ADMIN", "ADMIN")
 ///////////////////////////////////////////   EDU   ////////////////////////////////////////////////////////////////////
                     .antMatchers("/edu/**")             .authenticated()
 ///////////////////////////////////////////   RESUME   /////////////////////////////////////////////////////////////////
